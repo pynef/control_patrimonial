@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Sistema De Control Patrimonial - Instituciones</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <script type="text/javascript" src="{% static 'dist/js/angular.1.4.8.js' %}"></script>
+        <script type="text/javascript" src="{% static 'dist/js/angular-router.1.4.8.js' %}"></script>
+        <script type="text/javascript" src="{% static 'dist/js/app.js' %}"></script>
+
+    </head>
+    <body ng-app="institucionApp">
+
+        {% for i in instituciones %}
+            {{ i.nombre }}
+        {% endfor % %}
+
+    <script id="app_js" type="text/javascript" src="{% static 'dist/js/app.js' %}"></script>
+    </body>
+</html>
